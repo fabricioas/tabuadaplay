@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="taboadaApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="angular.js">
+    </script>
+    <script src="taboada.js">
+    </script>
+    <script src="app.js">
+    </script>
+    <style>
+      .taboada{
+        border: solid 1px #000000;
+      }
+      .senha>tbody>tr>td{
+        border: solid 1px #000000;
+        height: 20px
+      }
+
+    </style>
+    <link rel="stylesheet" href="simple-grid.css">
+  </head>
+  <body ng-controller="TaboadaController">
+    <div class="container">
+      <div class="row">
+        <div class="col-2">
+          <table class="taboada">
+            <tbody>
+              <tr>
+                <td colspan="5">Taboada do 1</td>
+              </tr>
+              <tr ng-repeat = "item in taboada1">
+                <td>{{item.a}}</td>
+                <td>x</td>
+                <td>{{item.b}}</td>
+                <td>=</td>
+                <td>{{item.a*item.b}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-6">
+          <table class="senha" style="width:300px">
+            <tbody>
+              <tr>
+                <td colspan="10">Senha</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <button type="button" name="button">Conferir</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
