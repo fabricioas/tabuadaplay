@@ -28,34 +28,37 @@
           <table class="taboada">
             <tbody>
               <tr>
-                <td colspan="5">Taboada do 1</td>
+                <td colspan="5">Taboada do {{multiplicador}}</td>
               </tr>
-              <tr ng-repeat = "item in taboada1">
-                <td>{{item.a}}</td>
+              <tr ng-repeat = "item in taboada">
+                <td>{{item.multiplicando}}</td>
                 <td>x</td>
-                <td>{{item.b}}</td>
+                <td>{{multiplicador}}</td>
                 <td>=</td>
-                <td>{{item.a*item.b}}</td>
+                <td>
+                  <input type="text" ng-model=item.produto size=3>
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
         <div class="col-6">
-          <table class="senha" style="width:300px">
+          <table class="senha" style="width:400px">
             <tbody>
               <tr>
                 <td colspan="10">Senha</td>
               </tr>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td style="width:40px;border: solid 1px {{taboada[0].validColor}};">{{taboada[0].produto}}</td>
+                <td style="width:40px;border: solid 1px {{taboada[1].validColor}};">{{taboada[1].produto}}</td>
+                <td style="width:40px;border: solid 1px {{taboada[2].validColor}};">{{taboada[2].produto}}</td>
+                <td style="width:40px;border: solid 1px {{taboada[3].validColor}};">{{taboada[3].produto}}</td>
+                <td style="width:40px;border: solid 1px {{taboada[4].validColor}};">{{taboada[4].produto}}</td>
+                <td style="width:40px;border: solid 1px {{taboada[5].validColor}};">{{taboada[5].produto}}</td>
+                <td style="width:40px;border: solid 1px {{taboada[6].validColor}};">{{taboada[6].produto}}</td>
+                <td style="width:40px;border: solid 1px {{taboada[7].validColor}};">{{taboada[7].produto}}</td>
+                <td style="width:40px;border: solid 1px {{taboada[8].validColor}};">{{taboada[8].produto}}</td>
+                <td style="width:40px;border: solid 1px {{taboada[9].validColor}};">{{taboada[9].produto}}</td>
               </tr>
             </tbody>
           </table>
@@ -63,7 +66,8 @@
       </div>
       <div class="row">
         <div class="col-2">
-          <button type="button" name="button">Conferir</button>
+          <button type="button" name="button" ng-click=conferir()>Conferir</button>
+          <button type="button" name="button" ng-click=proximo()>Proximo</button>
         </div>
       </div>
     </div>
